@@ -207,7 +207,7 @@ export function Hero() {
             transition={{ duration: 0.7, ease }}
           >
             <div className="flex items-center justify-between">
-              <Logo light />
+              <Logo />
               <button
                 type="button"
                 onClick={() => setMenuOpen(false)}
@@ -223,7 +223,7 @@ export function Hero() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="w-fit text-[44px] leading-tight tracking-tight text-white/90 transition-colors hover:text-gold-300 md:text-[72px]"
+                  className="w-fit text-[44px] leading-tight tracking-tight text-white/90 transition-colors hover:text-brand-400 md:text-[72px]"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.25 + i * 0.06, ease }}

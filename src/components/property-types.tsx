@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 import { ArrowUpRight, Download } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
-import { LogoMark } from "./brand";
 import { ease, Lines } from "./motion";
 import { IconPair } from "./skyline";
 import { propertyTypes } from "@/lib/site";
@@ -42,7 +41,7 @@ function TypeCard({ item, i }: { item: Item; i: number }) {
 function CatalogBlock() {
   return (
     <div className="flex flex-col items-center px-2 pt-6 text-center">
-      <LogoMark className="h-12 w-auto" />
+      <Image src="/images/boja-logo.png" alt="BOJA" width={393} height={272} className="h-14 w-auto" />
       <p className="mt-5 text-[11px] leading-snug text-ink/80">
         Explore Our Diverse
         <br />

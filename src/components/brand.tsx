@@ -1,36 +1,14 @@
-// BOJA logo mark and the social icons lucide no longer ships.
+// BOJA logo and the social icons lucide no longer ships.
+
+import Image from "next/image";
 
 type IconProps = { className?: string };
 
-/** Gold skyline mark: a cluster of slim towers rising to a peak. */
-export function LogoMark({ className = "h-8 w-auto" }: IconProps) {
-  const bars = [
-    [0, 22], [3, 30], [6, 38], [9, 46], [12, 56], [15, 46], [18, 36], [21, 28], [24, 20],
-  ];
+/** BOJA's own logo (orange-to-pink wordmark with the house roof over the "A"). */
+export function Logo({ className = "h-11 w-auto", href = "#home" }: IconProps & { href?: string }) {
   return (
-    <svg viewBox="0 0 27 56" className={className} aria-hidden>
-      <defs>
-        <linearGradient id="boja-gold" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#e8d3a2" />
-          <stop offset="0.55" stopColor="#b8975a" />
-          <stop offset="1" stopColor="#7d6233" />
-        </linearGradient>
-      </defs>
-      {bars.map(([x, h]) => (
-        <rect key={x} x={x} y={56 - h} width="1.6" height={h} fill="url(#boja-gold)" />
-      ))}
-    </svg>
-  );
-}
-
-export function Logo({ light = false }: { light?: boolean }) {
-  return (
-    <a href="#home" className="flex items-end gap-2" aria-label="BOJA Real Estate home">
-      <LogoMark className="h-8 w-auto" />
-      <span className={`flex flex-col leading-none ${light ? "text-white" : "text-ink"}`}>
-        <span className="font-logo text-[17px] font-semibold tracking-[0.42em]">BOJA</span>
-        <span className="mt-1 font-logo text-[6.5px] tracking-[0.5em] opacity-70">REAL ESTATE</span>
-      </span>
+    <a href={href} className="inline-flex" aria-label="BOJA Real Estate home">
+      <Image src="/images/boja-logo.png" alt="BOJA" width={393} height={272} priority className={className} />
     </a>
   );
 }

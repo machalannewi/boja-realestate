@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* BOJA palette, taken from the reference design: white, warm cream and charcoal with a gold logo. */
+  /* BOJA palette: white, warm cream and charcoal from the reference design, with the logo's orange-pink accent. */
   --color-ink: #141315;
   --color-charcoal: #1f1e21;
   --color-charcoal-2: #2a292d;
@@ -10,9 +10,10 @@
   --color-mist: #eeeeef;
   --color-muted: #8a888d;
   --color-sky: #cfe2ea;
-  --color-gold-300: #e8d3a2;
-  --color-gold-500: #b8975a;
-  --color-gold-700: #7d6233;
+  /* Logo gradient: orange → pink. */
+  --color-brand-400: #ff7a3d;
+  --color-brand-500: #ff5a1f;
+  --color-brand-600: #ff1a5c;
 
   --font-sans: var(--font-inter-tight), "Inter Tight", "Helvetica Neue", Arial, sans-serif;
   --font-logo: var(--font-cinzel), "Cinzel", Georgia, serif;
